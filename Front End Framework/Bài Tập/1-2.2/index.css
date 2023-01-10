@@ -1,0 +1,30 @@
+header {
+  height: 150px;
+  background-color: aqua;
+}
+img {
+  height: 150px;
+  background-color: aqua;
+}
+aside img {
+  height: 300px;
+  background-color: aqua;
+}
+nav {
+  height: 50px;
+  background-color: yellow;
+}
+.container > div > * {
+  height: 400px;
+  background-color: bisque;
+}
+.container > div > article {
+  background-color: green;
+}
+.container > div > aside {
+  background-color: pink;
+}
+footer {
+  height: 50px;
+  background-color: crimson;
+}
