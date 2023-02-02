@@ -37,49 +37,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-    <script src="app.js"></script>
   </head>
-  <body ng-app="SanPham">
-    <div ng-controller="SanPhamController">
-      <div class="container">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Tên SP</th>
-              <th scope="col">Giá</th>
-              <th scope="col">Màu Sắc</th>
-              <th scope="col">Khuyến Mãi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="if in sanPham">
-              <td>{{if.ten}}</td>
-              <td>{{if.gia}}</td>
-              <td>{{if.mau}}</td>
-              <td>{{if.km}}</td>
-            </tr>
-          </tbody>
-        </table>
-        <h1 ng-mousemove="myFunc()">Nhấn Đây</h1>
-        <p>{{count}}</p>
-        <input type="text" ng-model="test" />
-        <button ng-click="sayHello()">Sơn Đẹp Trai</button>
-        <p>{{text}}</p>
-        <hr />
-        <h6>Số 1:</h6>
-        <input type="number" ng-model="so1" />
-        <h6>Số 2:</h6>
-        <input type="number" ng-model="so2" /><br /><br />
-        <button ng-click="cong()">Cộng</button>
-        <button ng-click="tru()">Trừ</button>
-        <button ng-click="nhan()">Nhân</button>
-        <button ng-click="chia()">Chia</button>
-        <br />
-        <br />
-        <h4>Kết Quả:</h4>
-        <input type="number" disabled placeholder="{{kq}}" />
-      </div>
-      <hr />
+  <body ng-app="ThongTinAnh">
+    <div ng-controller="ThongTin">
       <div class="container">
         <label>Chiều Dài</label>
         <div class="form-group">
@@ -100,5 +60,6 @@
         <button ng-click="kQ()">Kết Quả</button>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

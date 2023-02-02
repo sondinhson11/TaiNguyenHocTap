@@ -20,4 +20,27 @@ app.controller("SanPhamController", function ($scope) {
       km: "5%",
     },
   ];
+  $scope.count = 0;
+  $scope.myFunc = function () {
+    $scope.count++;
+  };
+  $scope.sayHello = function () {
+    $scope.kq = $scope.test;
+  };
+  $scope.cong = function () {
+    $scope.kq = $scope.so1 + $scope.so2;
+  };
+  $scope.tru = function () {
+    $scope.kq = $scope.so1 - $scope.so2;
+  };
+  $scope.nhan = function () {
+    $scope.kq = $scope.so1 * $scope.so2;
+  };
+  $scope.chia = function () {
+    $scope.kq = $scope.so1 / $scope.so2;
+  };
+  $scope.kQ = function () {
+    $scope.cv = $scope.dai * $scope.rong;
+    $scope.dt = ($scope.dai + $scope.rong) * 2;
+  };
 });
