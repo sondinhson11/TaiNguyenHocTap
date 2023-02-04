@@ -1,0 +1,27 @@
+body {
+  background-image: url(img/backgroud.jpg);
+}
+.container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+.banner {
+  height: 250px;
+}
+article {
+  width: 100%;
+  height: auto;
+}
+.cardimg {
+  height: 170px;
+  width: 200px;
+}
+.block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}

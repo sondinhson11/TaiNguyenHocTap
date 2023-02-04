@@ -1,4 +1,3 @@
-new Date().getFullYear();
 var app = angular.module("ThongTinAnh", []);
 app.controller("ThongTin", function ($scope) {
   $scope.ten = "Nguyễn Văn Tèo";
@@ -18,13 +17,34 @@ app.controller("ThongTin", function ($scope) {
     }
   };
   $scope.xet2 = function () {
-    a = Year($scope.nam);
-    b = new Date().getFullYear();
-    if (b - a < 18 || b - a >= 27) {
-      $scope.hl = "Đậu";
-    } else {
-      $scope.hl = "Đậu";
-    }
+     if($scope.ten2 ==undefined ){
+      swal("Thông Báo!", "Không được để trống tên!", "error");
+     }else{
+        if($scope.nam==undefined ){
+          swal("Thông Báo!", "Không được để trống ngày tháng năm sinh!", "error");
+        }else{
+          a = $scope.nam.getFullYear();
+          b = new Date().getFullYear();
+          console.log(b-a);
+          if (b - a >= 18 && b - a <= 27) {
+            if($scope.gt == "Nam"){
+              swal("Thông Báo!", "Ông "+$scope.ten2+" đủ điền kiện đi nghĩa vụ quân sự!", "success");
+            }else if($scope.gt == "Nữ"){
+              swal("Thông Báo!", "Bà "+$scope.ten2+" đủ điền kiện đi nghĩa vụ quân sự!", "success");
+            }else{
+              swal("Thông Báo!", "Bê Đê "+$scope.ten2+" đủ điền kiện đi nghĩa vụ quân sự!", "success");
+            }
+          } else {
+            if($scope.gt == "Nam"){
+              swal("Thông Báo!", "Ông "+$scope.ten2+" không đủ điền kiện đi nghĩa vụ quân sự!", "error");
+            }else if($scope.gt == "Nữ"){
+              swal("Thông Báo!", "Bà "+$scope.ten2+"không đủ điền kiện đi nghĩa vụ quân sự!", "error");
+            }else{
+              swal("Thông Báo!", "Bê Đê "+$scope.ten2+"không đủ điền kiện đi nghĩa vụ quân sự!", "error");
+            }
+          }
+        }
+     }
   };
   $scope.thongTins = [
     {
