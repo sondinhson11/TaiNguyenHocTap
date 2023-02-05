@@ -1,6 +1,7 @@
 body {
-  background: #fff !important;
+  /* background-image: url("img/backgroud.jpg"); */
   font-family: "Times New Roman";
+  background-color: white;
 }
 a {
   text-decoration: none;
@@ -10,8 +11,11 @@ a {
 .section-title h2 {
   text-shadow: 1px 1px 2px #4444;
 }
+
 header nav {
-  background: #fff;
+  background-color: #192041;
+  border-bottom: 6px solid #ff9500;
+  color: orange;
   box-shadow: 0px 0px 5px #4444;
 }
 header nav a.navbar-brand h2 {

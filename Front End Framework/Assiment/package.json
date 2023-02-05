@@ -1,8 +1,8 @@
 {
-  "name": "duongson",
+  "name": "assiment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start":"live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
