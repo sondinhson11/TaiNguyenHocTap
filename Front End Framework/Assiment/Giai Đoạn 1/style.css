@@ -25,3 +25,12 @@ article {
   margin-top: auto;
   margin-bottom: auto;
 }
+.anhthongtin {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+footer {
+  height: 50px;
+  text-align: center;
+}
