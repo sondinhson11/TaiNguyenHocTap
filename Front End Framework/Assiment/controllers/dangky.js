@@ -14,7 +14,6 @@ window.dangky = function ($scope) {
             swal("Thông Báo!", "Không được để trống link FB", "error");
           } else {
             swal("Thông Báo!", "Đăng ký thành công", "success");
-            console.log($scope.diadiem);
           }
         }
       }
