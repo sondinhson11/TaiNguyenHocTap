@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <form>
+      <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" ng-model="inputValue.ID" />
+      </div>
+      <div class="form-group">
+        <label>Tên Khách Hàng</label>
+        <input type="text" class="form-control" ng-model="inputValue.ten" />
+        <p style="color: red" ng-if="KTDuLieu.ten == true">Bạn chưa nhập tên</p>
+      </div>
+      <div class="form-group">
+        <label>Năm Sinh</label>
+        <input type="text" class="form-control" ng-model="inputValue.namsinh" />
+        <p style="color: red" ng-if="KTDuLieu.namsinh == true">
+          Bạn chưa nhập năm sinh
+        </p>
+        <p style="color: red" ng-if="KTDuLieu.namsinhCheck == true">
+          Năm sinh phải lớn hơn 0
+        </p>
+      </div>
+      <div class="form-group">
+        <label>Địa Chỉ</label>
+        <input type="text" class="form-control" ng-model="inputValue.diachi" />
+        <p style="color: red" ng-if="KTDuLieu.diachi == true">
+          Bạn chưa nhập địa chỉ
+        </p>
+      </div>
+      <button type="submit" class="btn btn-primary" ng-click="onSubmit()">
+        Submit
+      </button>
+    </form>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+<br />
+<br />
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Tên</th>
+          <th scope="col">Năm Sinh</th>
+          <th scope="col">Địa Chỉ</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="if in DSKhachHang">
+        <tr>
+          <th scope="row">{{if.id}}</th>
+          <td>{{if.ten}}</td>
+          <td>{{if.namsinh}}</td>
+          <td>{{if.diachi}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2"></div>
+</div>
