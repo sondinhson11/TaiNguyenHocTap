@@ -1,10 +1,25 @@
 <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-8">
+    <center>
+      <h1>Khách Hàng</h1>
+    </center>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
     <form>
       <div class="form-group">
         <label>ID</label>
-        <input type="text" class="form-control" ng-model="inputValue.ID" />
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          ng-model="inputValue.id"
+        />
       </div>
       <div class="form-group">
         <label>Tên Khách Hàng</label>
@@ -13,7 +28,11 @@
       </div>
       <div class="form-group">
         <label>Năm Sinh</label>
-        <input type="text" class="form-control" ng-model="inputValue.namsinh" />
+        <input
+          type="number"
+          class="form-control"
+          ng-model="inputValue.namsinh"
+        />
         <p style="color: red" ng-if="KTDuLieu.namsinh == true">
           Bạn chưa nhập năm sinh
         </p>
@@ -29,7 +48,7 @@
         </p>
       </div>
       <button type="submit" class="btn btn-primary" ng-click="onSubmit()">
-        Submit
+        Đăng Ký
       </button>
     </form>
   </div>
@@ -47,6 +66,7 @@
           <th scope="col">Tên</th>
           <th scope="col">Năm Sinh</th>
           <th scope="col">Địa Chỉ</th>
+          <th scope="col">Tuỳ Chọn</th>
         </tr>
       </thead>
       <tbody ng-repeat="if in DSKhachHang">
@@ -55,6 +75,23 @@
           <td>{{if.ten}}</td>
           <td>{{if.namsinh}}</td>
           <td>{{if.diachi}}</td>
+          <td>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              ng-click="onSua(if.id)"
+            >
+              Sửa
+            </button>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              ng-click="onXoa(if.id)"
+            >
+              Xoá
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>
