@@ -1,78 +1,77 @@
 <body>
-  <div class="container login-form">
-    <div class="row mt-4 justify-content-center form-center">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <div class="offest-md-4">
-              <h1 class="text-center mt-4 mb-4 fw-bolder">{{dk}}</h1>
-              <form class="form-login">
-                <div class="form-outline mb-4">
-                  <input
-                    type="text"
-                    ng-model="hoten"
-                    class="form-control"
-                    placeholder="Họ Và Tên*"
-                  />
-                </div>
-                <div class="form-outline mb-4">
-                  <input
-                    type="number"
-                    ng-model="sdt"
-                    class="form-control"
-                    placeholder="Điện Thoại*"
-                  />
-                </div>
-                <div class="form-outline mb-4">
-                  <input
-                    type="email"
-                    ng-model="email"
-                    class="form-control"
-                    placeholder="Email*"
-                  />
-                </div>
-
-                <div class="form-outline mb-4" ng-model="nganh">
-                  <select class="custom-select">
-                    <option value="1" selected>Ứng Dụng Phần Mềm</option>
-                    <option value="2">Marketting</option>
-                    <option value="3">Tự Động Hóa</option>
-                    <option value="4">Cơ Khí</option>
-                    <option value="5">Công Nghệ Điện Tử</option>
-                    <option value="6">An Toàn Thông Tin</option>
-                  </select>
-                </div>
-                <div class="form-outline mb-4" ng-model="diadiem">
-                  <select class="custom-select">
-                    <option value="1" selected>Hà Nội</option>
-                    <option value="2">Cần Thơ</option>
-                    <option value="3">Hải Phòng</option>
-                    <option value="4">Thành Phố HCM</option>
-                    <option value="5">9+...</option>
-                  </select>
-                </div>
-                <div class="form-outline mb-4">
-                  <input
-                    type="text"
-                    ng-model="idfb"
-                    class="form-control"
-                    placeholder="Link Facebook của bạn*"
-                  />
-                </div>
-                <div class="">
-                  <button
-                    class="col-12 btn btn-primary btn-block mb-4"
-                    ng-click="xet2()"
-                  >
-                    Đăng Ký
-                  </button>
-                </div>
-              </form>
+  <div class="container-fluid">
+    <div class="container border" style="background-color: wheat">
+      <h1 class="text-center mt-4 mb-4 fw-bolder">{{dk}}</h1>
+      <div class="container login-form">
+        <form class="form-login">
+          <div class="row">
+            <div class="col-md-6">
+              <input
+                type="text"
+                ng-model="hoten"
+                class="form-control"
+                placeholder="Họ Và Tên"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                ng-model="sdt"
+                class="form-control"
+                placeholder="Điện Thoại"
+              />
             </div>
           </div>
-        </div>
+          <br />
+          <div class="row">
+            <div class="col-md-12">
+              <input
+                type="email"
+                ng-model="email"
+                class="form-control"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="form-outline mb-4" ng-model="nganh">
+            <select class="custom-select">
+              <option value="1" selected>Ứng Dụng Phần Mềm</option>
+              <option value="2">Marketting</option>
+              <option value="3">Tự Động Hóa</option>
+              <option value="4">Cơ Khí</option>
+              <option value="5">Công Nghệ Điện Tử</option>
+              <option value="6">An Toàn Thông Tin</option>
+            </select>
+          </div>
+          <div class="form-outline mb-4" ng-model="diadiem">
+            <select class="custom-select">
+              <option value="1" selected>Hà Nội</option>
+              <option value="2">Cần Thơ</option>
+              <option value="3">Hải Phòng</option>
+              <option value="4">Thành Phố HCM</option>
+              <option value="5">9+...</option>
+            </select>
+          </div>
+          <div class="form-outline mb-4">
+            <input
+              type="text"
+              ng-model="idfb"
+              class="form-control"
+              placeholder="Link Facebook của bạn"
+            />
+          </div>
+          <div class="">
+            <button
+              class="col-12 btn btn-primary btn-block mb-4"
+              ng-click="xet2()"
+            >
+              Đăng Ký
+            </button>
+          </div>
+        </form>
       </div>
+      <br />
     </div>
   </div>
-  <br />
 </body>

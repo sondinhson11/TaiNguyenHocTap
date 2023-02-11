@@ -1,0 +1,36 @@
+<div>
+  <form action="">
+    <label>Tiêu Đề</label>
+    <input type="text" class="form-control" ng-model="inputVale.tieude" />
+    <small style="color: red" ng-if="kiemtraDL.tieude == true"
+      >Bạn chưa nhập tiêu Đề</small
+    ><br />
+    <label>Mô Tả</label>
+    <input type="text" class="form-control" ng-model="inputVale.mota" />
+    <small style="color: red" ng-if="kiemtraDL.mota == true"
+      >Bạn chưa nhập mô tả</small
+    ><br />
+    <button type="submit" class="btn btn-primary" ng-click="onSubmit()">
+      Lưu
+    </button>
+  </form>
+
+  <br />
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Tiêu Đề</th>
+        <th scope="col">Mô Tả</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="if in tintuc">
+      <tr>
+        <th scope="row">{{if.id}}</th>
+        <td>{{if.tieude}}</td>
+        <td>{{if.mota}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
