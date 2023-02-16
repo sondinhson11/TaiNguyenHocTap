@@ -1,12 +1,20 @@
-window.trangchu = function ($scope) {
-  $scope.DSKhachHang = [
-    {
-      id: 1,
-      ten: "Văn Đình Sơn",
-      namsinh: 2002,
-      diachi: "Sầm Sơn",
-    },
-  ];
+window.trangchu = function ($scope, $http) {
+  // $scope.DSKhachHang = [
+  //   {
+  //     id: 1,
+  //     ten: "Văn Đình Sơn",
+  //     namsinh: 2002,
+  //     diachi: "Sầm Sơn",
+  //   },
+  // ];
+  var apiURL = "http://localhost:3000/sinhviens/";
+  $scope.getData = function () {
+    $http.get(apiURL).then(function (response) {
+      $scope.DSKhachHang = response.data;
+      console.log(response.data);
+    });
+  };
+  $scope.getData();
   $scope.KTDuLieu = {
     ten: false,
     namsinh: false,

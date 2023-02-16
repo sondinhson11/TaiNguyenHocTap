@@ -1,0 +1,21 @@
+{
+  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+  "sinhviens": [
+    {
+      "id": 1,
+      "ten": "Văn Đình Sơn",
+      "tuoi": 21,
+      "namsinh": 2002,
+      "diachi": "Sầm Sơn"
+    },
+    {
+      "id": 2,
+      "ten": "Nguyện Dau Buoi",
+      "tuoi": 21,
+      "namsinh": 2002,
+      "diachi": "Tuyên Quang"
+    }
+  ],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" }
+}
