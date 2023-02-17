@@ -1,0 +1,186 @@
+<main>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center mt-4 mb-4 fw-bolder">{{dk}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <form class="form-login">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-outline mb-4">
+              <label>Họ Tên</label>
+              <input
+                type="text"
+                ng-model="inputValue.hoten"
+                class="form-control"
+                placeholder="Họ Và Tên"
+              />
+              <small style="color: red" ng-if="KTDuLieu.hoten==true"
+                >Bạn chưa nhập tên</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-outline mb-4">
+              <label>Số Điện Thoại</label>
+              <input
+                type="text"
+                ng-model="inputValue.sdt"
+                class="form-control"
+                placeholder="Điện Thoại"
+              />
+              <small style="color: red" ng-if="KTDuLieu.sdt==true"
+                >Bạn chưa nhập sdt</small
+              >
+              <small style="color: red" ng-if="KTDuLieu.sdtcheck==true"
+                >Sai định dạng sđt</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-outline mb-4">
+              <label>CCCD/CMT</label>
+              <input
+                type="text"
+                ng-model="inputValue.cccd"
+                class="form-control"
+                placeholder="Căn Cước/Chứng Minh"
+              />
+              <small style="color: red" ng-if="KTDuLieu.cccd==true"
+                >Bạn chưa nhập cccd</small
+              >
+              <small style="color: red" ng-if="KTDuLieu.cccdcheck==true"
+                >CCCD/CMT phải là số</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-outline mb-4">
+              <label>Email</label>
+              <input
+                type="text"
+                ng-model="inputValue.email"
+                class="form-control"
+                placeholder="Email"
+              />
+              <small style="color: red" ng-if="KTDuLieu.email==true"
+                >Bạn chưa nhập email</small
+              >
+              <small style="color: red" ng-if="KTDuLieu.emailcheck==true"
+                >Nhập sai định dạng email</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-outline mb-4">
+              <label>Ngành</label>
+              <select class="custom-select" id="nganh">
+                <option value="Ứng Dụng Phần Mềm">Ứng Dụng Phần Mềm</option>
+                <option value="Marketting">Marketting</option>
+                <option value="Tự Động Hóa">Tự Động Hóa</option>
+                <option value="Cơ Khí">Cơ Khí</option>
+                <option value="Công Nghệ Điện Tử">Công Nghệ Điện Tử</option>
+                <option value="An Toàn Thông Tin">An Toàn Thông Tin</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-outline mb-4">
+              <label>Cơ Sở</label>
+              <select class="custom-select" id="coso">
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Cần Thơ">Cần Thơ</option>
+                <option value="Hải Phòng">Hải Phòng</option>
+                <option value="Thành Phố HCM">Thành Phố HCM</option>
+                <option value="9+..">9+...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-outline mb-4">
+              <label>Link FB</label>
+              <input
+                type="text"
+                ng-model="inputValue.idfb"
+                class="form-control"
+                placeholder="Link Facebook của bạn"
+              />
+              <small style="color: red" ng-if="KTDuLieu.idfb==true"
+                >Bạn chưa nhập link FB</small
+              >
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="onSubmit()">
+          Đăng Ký
+        </button>
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center mt-4 mb-4 fw-bolder">{{tt}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">HỌ TÊN</th>
+            <th scope="col">SỐ ĐIỆN THOẠI</th>
+            <th scope="col">CCCD/CMT</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">NGÀNH</th>
+            <th scope="col">CƠ SỞ</th>
+            <th scope="col">LINK FB</th>
+            <th scope="col">Tính Năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="if in DSSinhVien">
+            <th scope="row">{{if.id}}</th>
+            <td>{{if.hoten}}</td>
+            <td>{{if.sdt}}</td>
+            <td>{{if.cccd}}</td>
+            <td>{{if.email}}</td>
+            <td>{{if.nganh}}</td>
+            <td>{{if.coso}}</td>
+            <td>{{if.idfb}}</td>
+
+            <td>
+              <button
+                type="button"
+                class="btn btn-primary"
+                ng-click="onSua(if.id)"
+              >
+                Sửa
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                ng-click="onXoa(if.id)"
+              >
+                Xóa
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</main>

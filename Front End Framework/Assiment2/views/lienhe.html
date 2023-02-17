@@ -1,0 +1,130 @@
+<body>
+  <section>
+    <div class="container mb-5">
+      <section class="mb-4">
+        <h2 class="h1-responsive font-weight-bold text-center my-4">
+          {{lienhe}}
+        </h2>
+        <p class="text-center w-responsive mx-auto mb-5">
+          Hãy để chúng tôi giải đáp thắc mắc của bạn
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <label for="name" class="">Họ và tên</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      ng-model="inputValue.hoten"
+                    />
+                    <small style="color: red" ng-if="KTDuLieu.hoten==true"
+                      >Bạn chưa nhập tên</small
+                    >
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <label for="email" class="">Email</label>
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      ng-model="inputValue.email"
+                      class="form-control"
+                    />
+                    <small style="color: red" ng-if="KTDuLieu.email==true"
+                      >Bạn chưa nhập email</small
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <label for="subject" class="">Tiêu đề</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      ng-model="inputValue.tieude"
+                      class="form-control"
+                    />
+                    <small style="color: red" ng-if="KTDuLieu.tieude==true"
+                      >Bạn chưa nhập tiêu đề</small
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <label for="message">Nội dung</label>
+                    <textarea
+                      type="text"
+                      id="message"
+                      name="message"
+                      ng-model="inputValue.noidung"
+                      rows="2"
+                      class="form-control md-textarea"
+                    ></textarea>
+                    <small style="color: red" ng-if="KTDuLieu.noidung==true"
+                      >Bạn chưa nhập nội dung</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <!--Grid row-->
+            </form>
+            <br />
+            <div class="text-center text-md-left">
+              <a class="btn btn-primary" ng-click="SubmitOn()">Gửi Phiếu</a>
+            </div>
+            <div class="status"></div>
+          </div>
+          <div class="col-md-6 mb-md-0 mb-5">
+            <div class="gmap_canvas">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14895.455922776757!2d105.7467871!3d21.0381278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1676577946002!5m2!1svi!2s"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <a href="https://2yu.co">2yu</a>
+              <br />
+              <style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 401px;
+                  width: 505px;
+                }
+              </style>
+              <a href="https://embedgooglemap.2yu.co">html embed google map</a>
+              <style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  height: 401px;
+                  width: 505px;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Contact v.2-->
+    </div>
+  </section>
+</body>

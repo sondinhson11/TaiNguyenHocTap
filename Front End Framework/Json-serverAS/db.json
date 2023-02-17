@@ -1,0 +1,45 @@
+{
+  "sinhviens": [
+    {
+      "hoten": "Văn Đình Sơn",
+      "sdt": "0862521305",
+      "email": "sondinhson11@gmail.com",
+      "cccd": "038203004882",
+      "nganh": "Ứng Dụng Phần Mềm",
+      "coso": "Hà Nội",
+      "idfb": "https://www.facebook.com/sondinhson11",
+      "id": 1
+    },
+    {
+      "hoten": "Văn Đình Sơn",
+      "sdt": "0862521305",
+      "email": "sondinhson11@gmail.com",
+      "cccd": "038203004882",
+      "nganh": "Marketting",
+      "coso": "Hà Nội",
+      "idfb": "https://www.facebook.com/sondinhson11",
+      "id": 2
+    },
+    {
+      "hoten": "1",
+      "sdt": "0862521305",
+      "email": "sathucolam@gmail.com",
+      "cccd": "1",
+      "nganh": "Ứng Dụng Phần Mềm",
+      "coso": "Hà Nội",
+      "idfb": "1",
+      "id": 3
+    }
+  ],
+  "lienhe": [
+    {
+      "id": 1,
+      "hoten": "",
+      "email": "",
+      "tieude": "",
+      "noidung": ""
+
+
+    }
+  ]
+}
