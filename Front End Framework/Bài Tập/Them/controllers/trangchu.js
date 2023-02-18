@@ -1,4 +1,4 @@
-window.trangchu = function ($scope, $http) {
+window.trangchu = function ($scope, $http, $location) {
   // $scope.DSKhachHang = [
   //   {
   //     id: 1,
@@ -11,7 +11,6 @@ window.trangchu = function ($scope, $http) {
   $scope.getData = function () {
     $http.get(apiURL).then(function (response) {
       $scope.DSKhachHang = response.data;
-      console.log(response.data);
     });
   };
   $scope.getData();
@@ -49,12 +48,24 @@ window.trangchu = function ($scope, $http) {
     } else {
       var editID = $scope.editID;
       if (editID) {
-        $scope.DSKhachHang.forEach((element) => {
-          if (element.id == editID) {
-            element.id = editID;
-            element.ten = $scope.inputValue.ten;
-            element.namsinh = Number($scope.inputValue.namsinh);
-            element.diachi = $scope.inputValue.diachi;
+        // $scope.DSKhachHang.forEach((element) => {
+        //   if (element.id == editID) {
+        //     element.id = editID;
+        //     element.ten = $scope.inputValue.ten;
+        //     element.namsinh = Number($scope.inputValue.namsinh);
+        //     element.diachi = $scope.inputValue.diachi;
+        //   }
+        // });
+        var updateItem = {
+          ten: $scope.inputValue.ten,
+          namsinh: Number($scope.inputValue.namsinh),
+          diachi: $scope.inputValue.diachi,
+        };
+        $http.put(`${apiURL}/${editID}`, updateItem).then(function (response) {
+          if (response.status == 200) {
+            console.log(123);
+            $location.path("#!/");
+            $scope.getData();
           }
         });
         $scope.setText();
@@ -64,16 +75,20 @@ window.trangchu = function ($scope, $http) {
       $scope.KTDuLieu.namsinh = false;
       $scope.KTDuLieu.namsinhCheck = false;
       $scope.KTDuLieu.diachi = false;
-      var ds = $scope.DSKhachHang;
-      var newID = ds.length > 0 ? ds[ds.length - 1].id + 1 : 1;
+      // var ds = $scope.DSKhachHang;
+      // var newID = ds.length > 0 ? ds[ds.length - 1].id + 1 : 1;
       var newItem = {
-        id: newID,
+        // id: newID,
         ten: $scope.inputValue.ten,
         namsinh: Number($scope.inputValue.namsinh),
         diachi: $scope.inputValue.diachi,
       };
-      swal("Thành Công!", "Chúc mừng bạn đã đăng ký thành công!", "success");
-      $scope.DSKhachHang.push(newItem);
+      // $scope.DSKhachHang.push(newItem);
+      $http.post(apiURL, newItem).then(function (response) {
+        swal("Thành Công!", "Chúc mừng bạn đã đăng ký thành công!", "success");
+        $location.path("#!/");
+        $scope.getData();
+      });
       $scope.setText();
     }
   };
@@ -85,27 +100,36 @@ window.trangchu = function ($scope, $http) {
       namsinh: "",
       diachi: "",
     };
-    $scope.DSKhachHang.forEach((element) => {
-      if (element.id == editID) {
-        editItem.id = editID;
-        editItem.ten = element.ten;
-        editItem.namsinh = Number(element.namsinh);
-        editItem.diachi = element.diachi;
+    // $scope.DSKhachHang.forEach((element) => {
+    //   if (element.id == editID) {
+    //     editItem.id = editID;
+    //     editItem.ten = element.ten;
+    //     editItem.namsinh = Number(element.namsinh);
+    //     editItem.diachi = element.diachi;
+    //   }
+    // });
+    $http.get(`${apiURL}/${editID}`).then(function (response) {
+      if (response.status == 200) {
+        $scope.inputValue = {
+          id: editID,
+          ten: response.data.ten,
+          namsinh: Number(response.data.namsinh),
+          diachi: response.data.diachi,
+        };
       }
     });
-    $scope.inputValue = {
-      id: editID,
-      ten: editItem.ten,
-      namsinh: editItem.namsinh,
-      diachi: editItem.diachi,
-    };
   };
   $scope.onXoa = function (deleteID) {
     var confirm = window.confirm("bạn có muốn xoá k");
     if (confirm) {
-      $scope.DSKhachHang = $scope.DSKhachHang.filter(function (item) {
-        return item.id !== deleteID;
+      $http.delete(`${apiURL}/${deleteID}`).then(function (response) {
+        // console.log(response.data);
+        $location.path("#!/");
+        $scope.getData();
       });
+      // $scope.DSKhachHang = $scope.DSKhachHang.filter(function (item) {
+      //   return item.id !== deleteID;
+      // });
     }
   };
 };

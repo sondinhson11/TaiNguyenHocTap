@@ -1,21 +1,28 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "sinhviens": [
+  "sanpham": [
     {
-      "id": 1,
-      "ten": "Văn Đình Sơn",
-      "tuoi": 21,
-      "namsinh": 2002,
-      "diachi": "Sầm Sơn"
+      "name": "Đồng Hồ Siêu Nhân",
+      "price": 200,
+      "cateoryName": "dongho",
+      "id": 1
     },
     {
-      "id": 2,
-      "ten": "Nguyện Dau Buoi",
-      "tuoi": 21,
-      "namsinh": 2002,
-      "diachi": "Tuyên Quang"
+      "name": "HI",
+      "price": 1,
+      "cateoryName": "HI",
+      "id": 2
+    },
+    {
+      "name": "100",
+      "price": 10,
+      "cateoryName": "1",
+      "id": 3
+    },
+    {
+      "name": "11",
+      "price": 1,
+      "cateoryName": "1",
+      "id": 4
     }
-  ],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  ]
 }
