@@ -34,17 +34,26 @@
                 <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Tên</th>
-                    <th scope="col">SĐT</th>
+                    <th scope="col">Họ Và Tên</th>
                     <th scope="col">Địa Chỉ</th>
+                    <th scope="col">Số Điện Thoại</th>
+                    <th scope="col">Mật Khẩu</th>
+                    <th scope="col">Thành Phố</th>
+                    <th scope="col">Quốc Gia</th>
+                    <th scope="col">Ngày Sinh</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">KH1</th>
                     <td>Văn Đình Sơn</td>
-                    <td>0862521305</td>
                     <td>Sầm Sơn</td>
+                    <td>0862521305</td>
+                    <td>As121202</td>
+                    <td>Thanh Hóa</td>
+                    <td>Việt Nam</td>
+                    <td>10-01-2003</td>
+
                 </tr>
                 </tbody>
             </table>
@@ -54,25 +63,13 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <center>
-<%--                <form action="">--%>
-                    <button type="button" class="btn btn-primary" onclick="create()">Thêm</button>
-<%--                </form>--%>
-            <button type="button" class="btn btn-primary">Sửa</button>
-            <button type="button" class="btn btn-primary">Xóa</button></center>
+                <a href="khachhang/create">Thêm</a> |
+                <a href="khachhang/edit">Sửa</a>
+<%--                <a href="khachhang/create">Thêm</a>--%>
+            </center>
         </div>
         <div class="col-md-4"></div>
     </div>
-    <script>
-        function create() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/DuAnMauJava4_war_exploded/create', true);
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    console.log(xhr.responseText);
-                }
-            };
-            xhr.send();
-        }
     </script>
 </body>
 </html>

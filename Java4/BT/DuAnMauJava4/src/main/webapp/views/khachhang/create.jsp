@@ -31,18 +31,63 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <form>
-            <div class="form-group">
-                <label>Họ và Tên</label>
-                <input type="text" class="form-control" placeholder="Nhập họ tên của bạn">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label>Mã</label>
+                    <input type="text" name="ma" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label>Họ</label>
+                    <input type="text" name="ho" class="form-control" />
+                </div>
             </div>
-            <div class="form-group">
-                <label>Số Điện Thoại</label>
-                <input type="text" class="form-control" placeholder="Nhập sđt của bạn">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label>Tên đệm</label>
+                    <input type="text" name="ten_dem" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label>Tên</label>
+                    <input type="text" name="ten" class="form-control" />
+                </div>
             </div>
-            <div class="form-group">
-                <label>Địa Chỉ</label>
-                <input type="text" class="form-control" placeholder="Nhập địa chỉ của bạn">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label>Ngày sinh</label>
+                    <input type="date" name="ngay_sinh" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label>SDT</label>
+                    <input type="tel" name="sdt" class="form-control" />
+                </div>
             </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label>Địa chỉ</label>
+                    <input type="text" name="dia_chi" class="form-control" />
+                </div>
+                <div class="col-6">
+                    <label>Mật khẩu</label>
+                    <input type="password" name="mat_khau" class="form-control" />
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label>Quốc gia</label>
+                    <select name="quoc_gia" class="custom-select">
+                        <option value="vi">Việt Nam</option>
+                        <option value="us">Mỹ</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label>Thành phố</label>
+                    <select name="thanh_pho" class="custom-select">
+                        <option value="ha_noi">Hà Nội</option>
+                        <option value="new_york">New York</option>
+                    </select>
+                </div>
+            </div>
+            <br>
             <button type="submit" class="btn btn-primary">Thêm</button>
         </form>
     </div>
