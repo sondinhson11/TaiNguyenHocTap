@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.QLKhachHang;
+import viewmodel.QLKhachHang;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -74,8 +74,17 @@ public class KhachHangServlet extends HttpServlet {
         String thanhPho = req.getParameter("thanh_pho");
         String matKhau = req.getParameter("mat_khau");
 
+        System.out.println(ma);
+        System.out.println(ho);
+        System.out.println(tenDem);
+        System.out.println(ten);
+        System.out.println(ngaySinh);
+        System.out.println(sdt);
+        System.out.println(diaChi);
+        System.out.println(quocGia);
+        System.out.println(thanhPho);
+        System.out.println(matKhau);
         QLKhachHang qlkh = new QLKhachHang(ma,ho,tenDem,ten,diaChi,sdt,matKhau,thanhPho,quocGia,ngaySinh);
         list.add(qlkh);
-        System.out.println(list);
     }
 }
