@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="/DuAnMauJava4_war_exploded/css/bootstrap.min.css">
 </head>
 <body>
-<h1><%= "Tổng Hợp Các Bảng" %>
-</h1>
-<br/>
-<a href="khachhang">Khách Hàng</a>
+<center>
+    <h1><%= "Tổng Hợp Các Bảng" %>
+    </h1>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/khachhang/index">Khách Hàng</a>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/chucvu/index">Chức Vụ</a>
+</center>
 </body>
 </html>

@@ -60,8 +60,8 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <center>
-                <a href="khachhang/create">Thêm</a> |
-                <a href="khachhang/edit">Sửa</a>
+                <a href="../khachhang/create">Thêm</a> |
+                <a href="../khachhang/edit">Sửa</a>
 <%--                <a href="khachhang/create">Thêm</a>--%>
             </center>
         </div>
