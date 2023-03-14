@@ -12,14 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/DuAnMauJava4_war_exploded/css/bootstrap.min.css">
-    <title>Chức Vụ</title>
+    <title>Nhà Sản Xuất</title>
 </head>
 <body>
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <center>
-            <h1>Chức Vụ</h1>
+            <h1>Nhà Sản Xuất</h1>
         </center>
     </div>
     <div class="col-md-4"></div>
@@ -36,8 +36,8 @@
             </thead>
             <tbody>
             <tr>
-                <td>CV1</td>
-                <td>Quản Lý</td>
+                <td>NSX1</td>
+                <td>Sunhouse</td>
             </tr>
             </tbody>
         </table>
@@ -47,8 +47,8 @@
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <center>
-            <a href="../chucvu/create">Thêm</a> |
-            <a href="../chucvu/edit">Sửa</a>
+            <a href="../nsx/create">Thêm</a> |
+            <a href="../nsx/edit">Sửa</a>
         </center>
     </div>
     <div class="col-md-4"></div>

@@ -30,14 +30,12 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">ID</th>
                 <th scope="col">Mã</th>
                 <th scope="col">Tên</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <th scope="row">1</th>
                 <td>CV1</td>
                 <td>Quản Lý</td>
             </tr>

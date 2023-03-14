@@ -13,6 +13,10 @@
     <a href="/DuAnMauJava4_war_exploded/khachhang/index">Khách Hàng</a>
     <br/>
     <a href="/DuAnMauJava4_war_exploded/chucvu/index">Chức Vụ</a>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/cuahang/index">Cửa Hàng</a>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/nsx/index">Nhà Sản Xuất</a>
 </center>
 </body>
 </html>
