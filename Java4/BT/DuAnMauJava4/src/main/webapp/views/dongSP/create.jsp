@@ -12,14 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/DuAnMauJava4_war_exploded/css/bootstrap.min.css">
-    <title>Sửa Nhà Sản Xuất</title>
+    <title>Thêm Dòng Sản Phẩm</title>
 </head>
 <body>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <center>
-            <h1>Sửa Thông Tin Nhà Sản Xuất</h1>
+            <h1>Thêm Dòng Sản Phẩm</h1>
         </center>
     </div>
     <div class="col-md-2"></div>
@@ -28,7 +28,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <form  method="POST"
-               action="/DuAnMauJava4_war_exploded/nsx/store">
+               action="/DuAnMauJava4_war_exploded/dongSP/store">
             <div class="row mt-3">
                 <div class="col-6">
                     <label>Mã</label>

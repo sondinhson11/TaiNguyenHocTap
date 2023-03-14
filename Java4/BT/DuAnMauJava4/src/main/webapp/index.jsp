@@ -17,6 +17,12 @@
     <a href="/DuAnMauJava4_war_exploded/cuahang/index">Cửa Hàng</a>
     <br/>
     <a href="/DuAnMauJava4_war_exploded/nsx/index">Nhà Sản Xuất</a>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/sanpham/index">Sản Phẩm</a>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/mausac/index">Màu Sắc</a>
+    <br/>
+    <a href="/DuAnMauJava4_war_exploded/dongSP/index">Dòng SP</a>
 </center>
 </body>
 </html>

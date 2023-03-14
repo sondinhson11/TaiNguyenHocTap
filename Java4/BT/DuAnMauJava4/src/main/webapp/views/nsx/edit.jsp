@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/DuAnMauJava4_war_exploded/css/bootstrap.min.css">
-    <title>Sửa Chức Vụ</title>
+    <title>Sửa Nhà Sản Xuất</title>
 </head>
 <body>
 <div class="row">
